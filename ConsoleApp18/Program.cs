@@ -187,14 +187,14 @@ namespace Assignment1_S19
         {
             try
             {
-                int n = b.Length;
-                Boolean[] counted = new Boolean[n]; 
-                for (int i = 0; i < n; i++)
+                int n = b.Length; //delcaring integer n and storing the length of the array
+                Boolean[] counted = new Boolean[n];  //A new array called Boolean is created for 1 and 0 
+                for (int i = 0; i < n; i++) //for loop created for the number of values 
                 {
-                    if (counted[i] == true)
+                    if (counted[i] == true)  //the ith value of array counted is checked and if value is same then the loop continues
                         continue;   
-                    int r = 1;
-                    for (int j = i + 1; j < n; j++)  
+                    int r = 1;  //declaring integer value r and assigning value as 1
+                    for (int j = i + 1; j < n; j++)  //for loop created to check for each value's length
                     {
                         if (b[i] == b[j])
                         {
@@ -203,7 +203,7 @@ namespace Assignment1_S19
                         }
 
                     }
-                    Console.WriteLine(b[i] + " - " + r);
+                    Console.WriteLine(b[i] + " - " + r);  //"-" used to seperate values from their respective lengths 
                 }
             }
             catch
