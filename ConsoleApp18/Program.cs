@@ -37,7 +37,7 @@ namespace Assignment1_S19
             computeFrequency(arr);
             Console.ReadKey();
 
-            // write your self-reflection here as a comment
+            // The basic concepts about loops, variables, calling methods, counters have been refreshed. Working functionally for over 2.5 years, this is at the same time difficult for me. This program is going to be enriching 
 
         }
 
