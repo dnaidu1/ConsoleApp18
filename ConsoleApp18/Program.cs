@@ -46,15 +46,15 @@ namespace Assignment1_S19
             try
             {
 
-                int a = Convert.ToInt32(x);
-                int b = Convert.ToInt32(y);
-                int i, j, k;
-                for (i = a; i < b; i++) 
+                int a = x; //declaring integer a and assigning value of x
+                int b = y;  //declaring integer b and assigning value of y
+                int i, j, k; //declaring integers i, j and k
+                for (i = a; i < b; i++) //for loop inserted from a to b
                 {
-                    k = 0;
-                    if (i > 1) 
+                    k = 0; //initializing k with value 0
+                    if (i > 1) //if statement to check for values more than 1
                     {
-                        for (j = 2; j < i; j++)
+                        for (j = 2; j < i; j++) //for loop to check for prime numbers 
                         {
                             if (i % j == 0) 
                             {
@@ -81,12 +81,12 @@ namespace Assignment1_S19
         {
             try
             {
-                int i, total = 0;
-                int result = 1; //value of resukt is 1
-                for (i = 1; i <= n1; i++)
+                int i, total = 0; //declaring integers i and total and assigning value of total as 0
+                int result = 1; //declaring integer result and assigning value as 1
+                for (i = 1; i <= n1; i++)  //initializing for loop to check for numbers from 1 to 5
                 {
                     total = total + result;  //This gives the next number in the series
-                    result = (result) + 1;
+                    result = (result) + 1;  //result is 1+2+3+4+5 = 15
                 }
                 return Convert.ToDouble(total);
             }
@@ -146,10 +146,10 @@ namespace Assignment1_S19
                 {
                     while (n > 0)
                     {
-                        rem = n % 10; //
-                        decval = (decval + rem) * binval;
+                        rem = n % 10; //remainder of the division 
+                        decval = (decval + rem) * binval; //decimal is the sum of decimal value and remainder multiplied by the binary value
                         n = n/10;
-                        binval = binval * 2;
+                        binval = binval * 2; //final binary value is the product of binary value multiplied by 2
                     }
                 }
                 catch
@@ -165,15 +165,15 @@ namespace Assignment1_S19
         {
             try
             {
-        int space, a;
-        for (int i = 1; i <= n; i++)
+        int space, a; //declaring integers space and a
+        for (int i = 1; i <= n; i++) //for loop used to calculate the number of rows
         {
-            for (space = 1; space <= (n - i); space++)
+            for (space = 1; space <= (n - i); space++) //calculating the number of spaces between stars 
                 Console.Write(" "); 
             for (a = 1; a <= i; a++)   
-                Console.Write('*'); //triangle will be made of *
-            for (a = (i - 1); a >= 1; a--)   
-                Console.Write("*"); 
+                Console.Write('*'); 
+            for (a = (i - 1); a >= 1; a--)    //calculating the number of stars in each row
+                Console.Write("*");   //input "*" for the system to identify instead of integer values
             Console.WriteLine();
         }
     }
